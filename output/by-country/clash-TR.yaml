@@ -15,7 +15,7 @@ proxies:
   servername: 195-162-69-203.sslip.io
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: 195-162-69-203.sslip.io
+  server: 195.162.69.203
   port: 8443
   uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
   udp: true
@@ -30,15 +30,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
-  type: vless
-  server: 195.162.69.203
-  port: 8443
-  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 195-162-69-203.sslip.io
 proxy-groups:
 - name: PROXIES
   type: select
@@ -47,7 +38,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -56,6 +46,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
 rules:
 - MATCH,PROXIES

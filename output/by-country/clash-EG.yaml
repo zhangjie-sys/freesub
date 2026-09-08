@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇭 PH 01 - xiaohe
+- name: 🇪🇬 EG 01 - xiaohe
   type: vless
-  server: 149.104.109.17
+  server: 38.54.59.209
   port: 2087
-  uuid: 9ed3dcb3-b71a-4ae1-8210-95e33615d7e6
+  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /04461917b179
+    path: /d1000b16fe76
     headers:
-      Host: 149.104.109.17
+      Host: 38.54.59.209
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇭 PH 01 - xiaohe
+  - 🇪🇬 EG 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇭 PH 01 - xiaohe
+  - 🇪🇬 EG 01 - xiaohe
 rules:
 - MATCH,PROXIES
