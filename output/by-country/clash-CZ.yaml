@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 172.67.131.112
+  server: fpoixf69hqt3e6d4urtb.mamadneizeh.workers.dev
   port: 443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  uuid: 0b41f339-5809-46ef-8351-b03fdc441539
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: INDEX.Arcane509.Workers.DEV
+  servername: FpoiXF69hQT3E6d4URTB.MamADNEIZeH.WorKers.DEV
   network: ws
   ws-opts:
-    path: /
+    path: /vl/lYNtP7z8pJUmfp01tz5wEnuDujJtZ?ed=2560
     headers:
-      Host: index.arcane509.workers.dev
+      Host: fpoixf69hqt3e6d4urtb.mamadneizeh.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
