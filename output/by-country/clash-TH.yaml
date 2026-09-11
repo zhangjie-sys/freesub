@@ -6,6 +6,33 @@ log-level: info
 proxies:
 - name: 🇹🇭 TH 01 - xiaohe
   type: vless
+  server: 104.16.107.139
+  port: 8880
+  uuid: 2fb22d40-598f-4890-85a6-d69928b1fd55
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: odd-cloud-f2a1.73-12e.workers.dev
+- name: 🇹🇭 TH 02 - xiaohe
+  type: vless
+  server: 172.67.65.56
+  port: 2053
+  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: whitecreeper.pages.dev
+  network: ws
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.Net
+    headers:
+      Host: whitecreeper.pages.dev
+- name: 🇹🇭 TH 03 - xiaohe
+  type: vless
   server: 43.133.110.81
   port: 443
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
@@ -24,11 +51,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇭 TH 02 - xiaohe
+  - 🇹🇭 TH 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇭 TH 01 - xiaohe
+  - 🇹🇭 TH 02 - xiaohe
+  - 🇹🇭 TH 03 - xiaohe
 rules:
 - MATCH,PROXIES

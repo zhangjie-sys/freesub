@@ -5,47 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 SC 01 - xiaohe
-  type: vless
-  server: 104.21.70.21
-  port: 8080
-  uuid: 518de0d4-6ce8-4404-80db-23c4a8806128
+  type: vmess
+  server: 156.226.183.181
+  port: 54321
+  uuid: d3bcc1f1-6294-4f68-bcf3-c3bcb2001520
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiQkFLTnhqM2tZTSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: ez-5faafb.esmaoi.workers.dev
 - name: 🇸🇨 SC 02 - xiaohe
-  type: vless
-  server: 63.141.128.22
-  port: 443
-  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
-- name: 🇸🇨 SC 03 - xiaohe
-  type: vless
-  server: 45.130.125.96
-  port: 443
-  uuid: 28607fa7-db30-47d6-942a-f5744e4be9ad
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: dfsuporte.garena.com.ex33r.eu.cc
-  network: ws
-  ws-opts:
-    path: /id-pusat
-    headers:
-      Host: dfsuporte.garena.com.ex33r.eu.cc
-- name: 🇸🇨 SC 04 - xiaohe
   type: vmess
   server: 156.226.183.181
   port: 54321
@@ -62,8 +31,6 @@ proxy-groups:
   - AUTO
   - 🇸🇨 SC 01 - xiaohe
   - 🇸🇨 SC 02 - xiaohe
-  - 🇸🇨 SC 03 - xiaohe
-  - 🇸🇨 SC 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -71,7 +38,5 @@ proxy-groups:
   proxies:
   - 🇸🇨 SC 01 - xiaohe
   - 🇸🇨 SC 02 - xiaohe
-  - 🇸🇨 SC 03 - xiaohe
-  - 🇸🇨 SC 04 - xiaohe
 rules:
 - MATCH,PROXIES
